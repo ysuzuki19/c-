@@ -1,4 +1,4 @@
-PROG = snow.cpp
+PROG = main.cpp
 TARGET = proj
 LIBRARY = ../library
 CXX = g++

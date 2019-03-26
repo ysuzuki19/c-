@@ -1,4 +1,4 @@
-PROG = snow.cpp
+PROG = multiThread.cpp
 TARGET = proj
 LIBRARY = ../library
 CXX = g++
