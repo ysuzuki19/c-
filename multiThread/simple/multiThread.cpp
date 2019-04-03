@@ -4,27 +4,18 @@
 #include <thread>
 using namespace std;
 
-//3の倍数+1となる数だけを調べる
 void th_A()
 {
   char ch;
-//  for (int n=0; n<5; n++) {
-//    cout<<n<<' ';
   while(1){
     cin.clear();
     cin >> setw(1) >> ch;
-//    cin.ignore(1, ' ');
     cout << endl << ch << endl;
   }
-//  }
 }
 
-//3の倍数+2となる数だけを調べる
 void th_B()
 {
-//  for (int n=0; n<5; n++) {
-//    cout<<n<<' ';
-//  }
   const int sleepTime = 1000;
   while(1){
     cout << "Please put key ..." << endl;
