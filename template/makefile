@@ -1,4 +1,4 @@
-PROG = main.cpp
+PROG = src.cpp
 TARGET = proj
 LIBRARY = ../library
 CXX = g++
