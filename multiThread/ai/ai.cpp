@@ -14,6 +14,9 @@ void man()
       cout << "man   : 'I love you twice  as much as you. ' ---> Now ai is " << ai << endl;
       std::this_thread::sleep_for(std::chrono::milliseconds(100));
       flag = 0;
+      if(ai == 0){
+        break;
+      }
     }
   }
 }
@@ -26,6 +29,9 @@ void woman()
       cout << "woman : 'I love you thrice as much as you. ' ---> Now ai is " << ai << endl;
       std::this_thread::sleep_for(std::chrono::milliseconds(100));
       flag = 1;
+      if(ai == 0){
+        break;
+      }
     }
   }
 }
