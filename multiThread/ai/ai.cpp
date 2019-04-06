@@ -10,38 +10,32 @@ mutex mtx;
 
 void man()
 {
-  while(1){
-    if(mtx.try_lock()){
+  do{
+    unique_lock lock(mtx);
+    if(lock.owns_lock()){
       if(flag == 1){
         ai *= 2;
         cout << "man   : 'I love you twice  as much as you. ' ---> Now ai is " << ai << endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         flag = 0;
-        if(ai == 0){
-          break;
-        }
       }
-      mtx.unlock();
     }
-  }
+  }while(ai != 0);
 }
 
 void woman()
 {
-  while(1){
-    if(mtx.try_lock()){
+  do{
+    unique_lock lock(mtx);
+    if(lock.owns_lock()){
       if(flag == 0){
         ai *= 3;
         cout << "woman : 'I love you thrice as much as you. ' ---> Now ai is " << ai << endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         flag = 1;
-        if(ai == 0){
-          break;
-        }
       }
-      mtx.unlock();
     }
-  }
+  }while(ai != 0);
 }
 
 int main()

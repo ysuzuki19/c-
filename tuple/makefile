@@ -4,6 +4,4 @@ LIBRARY = ../library
 CXX = g++
 
 ${TARGET} : ${PROG}
-	${CXX} -o ${TARGET} -I${LIBRARY} ${PROG}
-
-
+	${CXX} -std=c++17 -o ${TARGET} -I${LIBRARY} ${PROG}
