@@ -1,9 +1,13 @@
 PROG = src.cpp
 TARGET = proj
-LIBRARY = ../library
 CXX = g++
+CXX_VERSION = -std=c++17
 
 ${TARGET} : ${PROG}
-	${CXX} -o ${TARGET} -I${LIBRARY} ${PROG}
+	${CXX} ${CXX_VERSION} -o ${TARGET} -I${LIBRARY} ${PROG}
 
+run :
+	./proj
 
+clean :
+	rm -r ${TARGET}
