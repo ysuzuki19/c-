@@ -8,7 +8,7 @@ using namespace std;
 int snowwing(vector<vector<char> >&);
 int displaySnow(vector<vector<char> >&);
 
-int main(int argv, char **argc){
+int main(int argv, char **argc)j
   const int R = 100;
   const int C = 50;
   const int sleepTime = 10;
