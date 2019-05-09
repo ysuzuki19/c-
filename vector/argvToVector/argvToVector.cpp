@@ -4,7 +4,7 @@
 using namespace std;
 
 //int main(int argc, char **argv){
-int main(int argc, char *argv[]){
+int main(int argc, char **argv){
   vector<string> str(argv, argv + argc);
 //  string str = to_string(argv[1]);
   vector<int> x (0);

@@ -12,11 +12,18 @@ vector<int> initVector (){
   return tmp;
 }
 
-void displayVector(vector<int> v){
-  for(size_t i=0; i<v.size(); i++){
-    cout << v[i] << " ";
-  }
+void view(vector<int> v){
+  for(const auto& e : v)
+    cout << e << " ";
   cout << endl;
+}
+
+void view(vector<vector<int>> vv){
+  for(const auto& v : vv){
+    for(const auto& e : vv)
+      cout << e << " ";
+    cout << endl;
+  }
 }
 
 int main(){
@@ -24,15 +31,7 @@ int main(){
   v = initVector();
 
   cout << "raw" << endl;
-  displayVector(v);
-
-  sort(v.begin(), v.end());
-  cout << "ascending order" << endl;
-  displayVector(v);
-
-  sort(v.begin(), v.end(),greater<int>());
-  cout << "descending order" << endl;
-  displayVector(v);
+  view(v);
 
   return 0;
 }
